@@ -60,18 +60,20 @@ const ExplorePage = () => {
 						onClick={() => exploreRepos("java")}
 					/>
 				</div>
-				{repos.length > 0 && (
-					<h2 className='text-lg font-semibold text-center my-4'>
-						<span className='bg-blue-100 text-blue-800 font-medium me-2 px-2.5 py-0.5 rounded-full '>
-							{selectedLanguage.toUpperCase()}{" "}
-						</span>
-						Repositories
-					</h2>
-				)}
-				{!loading && repos.length > 0 && <Repos repos={repos} alwaysFullWidth />}
-				{loading && <Spinner />}
+						{repos.length > 0 && (
+							<h2 className='text-lg font-semibold text-center my-4'>
+								<span className='bg-blue-100 text-blue-800 font-medium me-2 px-2.5 py-0.5 rounded-full '>
+									{selectedLanguage.toUpperCase()}{" "}
+								</span>
+								Repositories
+							</h2>
+						)}
+						{!loading && repos.length > 0 && <Repos repos={repos} alwaysFullWidth />}
+						{loading && <Spinner />}
+					
+				</div>
 			</div>
-		</div>
+		
 	);
 };
 export default ExplorePage;

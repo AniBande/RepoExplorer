@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema(
 		},
 		name: {
 			type: String,
-			default: "", //
+			default: "",
 		},
 		profileUrl: {
 			type: String,
@@ -32,6 +32,25 @@ const userSchema = new mongoose.Schema(
 					type: String,
 				},
 				likedDate: {
+					type: Date,
+					default: Date.now,
+				},
+			},
+		],
+		comments: [
+			{
+				username: {
+					type: String,
+					required: true,
+				},
+				avatarUrl: {
+					type: String,
+				},
+				commentText: {
+					type: String,
+					required: true,
+				},
+				commentDate: {
 					type: Date,
 					default: Date.now,
 				},

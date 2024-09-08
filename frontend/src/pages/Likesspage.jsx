@@ -5,7 +5,7 @@ import { formatDate } from "../utils/functions";
 
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 
-const LikesPage = () => {
+const LikessPage = () => {
 	const [likes, setLikes] = useState([]);
 
 	useEffect(() => {
@@ -56,11 +56,11 @@ const LikesPage = () => {
 
 	return (
 		<>
-			<br />
+			{/* <br />
 			<span>*dummy data is maped here </span>
 			<br />
-			<a href="/likess" className="text-blue-500">Click here for real data</a>
-			<br /> <br />
+			<a href="/likesspage" className="text-blue-500">Click here for real data</a>
+			<br /> <br /> */}
 			<div className='relative overflow-x-auto shadow-md rounded-lg px-4'>
 				<table className='w-full text-sm text-left rtl:text-right bg-glass overflow-hidden'>
 					<thead className='text-xs uppercase bg-glass'>
@@ -109,8 +109,8 @@ const LikesPage = () => {
 				<div className='flex flex-col gap-4'>
 					{likes.map((user, idx) => (
 						<div className='flex flex-col gap-4'>
-							{/* {likes.map((user, idx) => ( */}
-							{dummyData.map((user, idx) => (
+							 {likes.map((user, idx) => ( 
+							// {dummyData.map((user, idx) => (
 								<div
 									className='bg-black border border-gradient rounded-full p-4 flex items-center justify-between'
 									key={user.username}
@@ -143,4 +143,4 @@ const LikesPage = () => {
 
 	);
 };
-export default LikesPage;
+export default LikessPage;
